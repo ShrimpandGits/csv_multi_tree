@@ -26,12 +26,16 @@ with open("tree_test.csv") as f:
 
         #for each row of the csv:
         for row in reader:
+                
             #isolating the multi trunk string
             tree = (row[lines-1]).split(' ')
+                
             #removing the "x" spacing
             treelist = tree[2].split('x')
+                
             #converting text to float
             Prep = [float(i) for i in treelist]
+                
             #mutlitrunk calculation formula:
             multi_dia = (((sum(Prep)-max(Prep))/2)+max(Prep))
 
